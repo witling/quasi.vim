@@ -11,6 +11,10 @@ syn match syntaxKeyword "patrick!"
 " Numbers
 syn match syntaxNumber /\d\+\(\.\)\?\d*/
 
+" Strings
+syn region syntaxString start='"' end='"'
+
 hi def link syntaxConstant Constant
 hi def link syntaxKeyword Keyword
 hi def link syntaxNumber Number
+hi def link syntaxString String
