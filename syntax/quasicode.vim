@@ -9,7 +9,7 @@ syn match syntaxKeyword "kris??"
 syn match syntaxKeyword "patrick!"
 
 " Numbers
-syn match syntaxNumber /\d+(\.)?\d*/
+syn match syntaxNumber /\d\+\(\.\)\?\d*/
 
 hi def link syntaxConstant Constant
 hi def link syntaxKeyword Keyword
