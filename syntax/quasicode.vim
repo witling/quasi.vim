@@ -9,7 +9,7 @@ syn match syntaxKeyword "kris??"
 syn match syntaxKeyword "patrick!"
 
 " Numbers
-syn match syntaxNumber /\d\+\(\.\)\?\d*/
+syn match syntaxNumber /\<\d\+\(\.\)\?\d*/
 
 " Strings
 syn region syntaxString start='"' end='"'
