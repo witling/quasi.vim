@@ -18,11 +18,15 @@ endfunction
 
 function! s:is_block_statement(lnum)
     let prevline = s:get_line_trimmed(lnum)
-    return prevline =~? '/und zwar.*/'
-        \ || prevline =~? '/das holen wir nach.*/'
-        \ || prevline =~? '/kris\?.*/'
-        \ || prevline =~? '/kris\?\?.*/'
-        \ || prevline =~? '/ach kris\..*/'
+    if prevline =~? '/und zwar.*/'
+        "\ || prevline =~? '/das holen wir nach.*/'
+        "\ || prevline =~? '/kris\?.*/'
+        "\ || prevline =~? '/kris\?\?.*/'
+        "\ || prevline =~? '/ach kris\..*/'
+        return 1
+    else
+        return 0
+    endif
 endfunction
 
 function GetQuasiIndent(lnum)
