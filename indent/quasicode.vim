@@ -4,6 +4,7 @@ if exists("b:did_indent")
 endif
 let b:did_indent = 1
 
+setlocal nolisp
 setlocal autoindent
 setlocal indentexpr=GetQuasiIndent(v:lnum)
 
@@ -17,12 +18,12 @@ function! s:get_line_trimmed(lnum)
 endfunction
 
 function! s:is_block_statement(lnum)
-    let prevline = s:get_line_trimmed(lnum)
-    if prevline =~? '/und zwar.*/'
-        "\ || prevline =~? '/das holen wir nach.*/'
-        "\ || prevline =~? '/kris\?.*/'
-        "\ || prevline =~? '/kris\?\?.*/'
-        "\ || prevline =~? '/ach kris\..*/'
+    let prevline = s:get_line_trimmed(a:lnum)
+    if prevline =~? 'und zwar.*'
+        \ || prevline =~? 'das holen wir nach.*'
+        \ || prevline =~? 'kris\?.*'
+        \ || prevline =~? 'kris\?\?.*'
+        \ || prevline =~? 'ach kris\..*'
         return 1
     else
         return 0
@@ -30,7 +31,6 @@ function! s:is_block_statement(lnum)
 endfunction
 
 function GetQuasiIndent(lnum)
-    " let line = getline(a:lnum)
     let prevlinenum = prevnonblank(a:lnum - 1)
 
     if s:is_block_statement(prevlinenum)
