@@ -8,6 +8,9 @@ syn match syntaxKeyword "kris?"
 syn match syntaxKeyword "kris??"
 syn match syntaxKeyword "patrick!"
 
+" Operators
+syn match syntaxOperator "\(+\|-\|*\|/\|modulo\|<\)"
+
 " Numbers
 syn match syntaxNumber /\<\d\+\(\.\)\?\d*/
 
@@ -15,6 +18,7 @@ syn match syntaxNumber /\<\d\+\(\.\)\?\d*/
 syn region syntaxString start='"' end='"'
 
 hi def link syntaxConstant Constant
+hi def link syntaxOperator Operator
 hi def link syntaxKeyword Keyword
 hi def link syntaxNumber Number
 hi def link syntaxString String
