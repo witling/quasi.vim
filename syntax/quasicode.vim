@@ -7,6 +7,7 @@ syn match syntaxKeyword "\<kris\."
 syn match syntaxKeyword "kris?"
 syn match syntaxKeyword "kris??"
 syn match syntaxKeyword "patrick!"
+syn match syntaxKeyword "bitte?"
 
 " Operators
 syn match syntaxOperator "\(+\|-\|*\|/\|modulo\|<\)"
