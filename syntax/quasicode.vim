@@ -22,7 +22,7 @@ syn match syntaxNumber /\<\d\+\(\.\)\?\d*/
 syn region syntaxString start='"' end='"'
 
 hi def link syntaxConstant Constant
-hi def link syntaxBuiltin Type
+hi def link syntaxBuiltin PreProc
 hi def link syntaxOperator Operator
 hi def link syntaxKeyword Keyword
 hi def link syntaxNumber Number
