@@ -2,7 +2,7 @@
 syn keyword syntaxConstant uzbl
 
 " Keywords
-syn keyword syntaxKeyword ach action also bei bis das fertig fähler holen hä im ist jens mit nach not oder oettinger passt please quadrat so softwareproblem stark und use wir von zwar
+syn keyword syntaxKeyword ach action also bei bis das fertig fähler holen hä im ist jens mit nach not oder oettinger passt please quadrat so softwareproblem solange stark und use wir von zwar
 syn match syntaxKeyword "\<kris\."
 syn match syntaxKeyword "kris?"
 syn match syntaxKeyword "kris??"
