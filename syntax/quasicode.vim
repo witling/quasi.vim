@@ -10,7 +10,7 @@ syn match syntaxKeyword "patrick!"
 
 " Builtin
 syn match syntaxBuiltin "bitte?"
-syn keyword syntaxBuiltin liste menge quasi
+syn keyword syntaxBuiltin assert liste menge quasi
 
 " Operators
 syn match syntaxOperator "\(+\|-\|*\|/\|modulo\|<\)"
